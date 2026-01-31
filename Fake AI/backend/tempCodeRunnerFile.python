@@ -1,0 +1,10 @@
+from openai import OpenAI
+
+client = OpenAI(api_key="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")
+
+response = client.responses.create(
+    model="gpt-4o-mini",
+    input="Say hello in one word"
+)
+
+print(response.output_text)
